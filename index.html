@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Library Membership Form</title>
+    <link rel="stylesheet" type="text/css" href="form-style.css" />
+  </head>
+  <body>
+    <h2>Library Membership Form</h2>
+    <form action="submit-form.php" method="POST">
+      <label for="studentId">Student ID:</label>
+      <input type="text" id="studentId" name="studentId" required /><br /><br />
+
+      <label for="password">Password:</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        minlength="6"
+        required
+      /><br /><br />
+
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required /><br /><br />
+
+      <label for="programme">Programme:</label>
+      <select id="programme" name="programme">
+        <option value="BCA" selected>BCA</option>
+        <option value="BBA">BBA</option>
+        <option value="MBA">MBA</option>
+        <option value="MCA">MCA</option></select
+      ><br /><br />
+
+      <label for="previousMember">Was a member earlier?</label><br />
+      <label><input type="radio" name="previousMember" value="yes" />Yes</label>
+      <label
+        ><input
+          type="radio"
+          name="previousMember"
+          value="no"
+          checked
+        />No</label
+      ><br /><br />
+
+      <input type="submit" value="Submit Form" />
+      <form action="submit-form.php" method="POST" onsubmit="return validateForm();">
+    </form>
+
+    <script src="script.js"></script>
+  </body>
+</html>
